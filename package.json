@@ -32,6 +32,7 @@
         ]
     },
     "devDependencies": {
+        "@changesets/cli": "^2.27.3",
         "@types/loader-utils": "^2.0.6",
         "@types/node": "^20.12.12",
         "@typescript-eslint/eslint-plugin": "^5.62.0",
