@@ -1,1 +1,5 @@
 node_modules
+dist
+*/pacakages/*/dist
+pacakages/**/dist
+**/dist
