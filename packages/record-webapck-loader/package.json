@@ -28,7 +28,7 @@
         "type": "git",
         "url": "git+https://github.com/webgzh907247189/webpack-loader.git"
     },
-    "dependencies": {
-        "cus-loader-utils": "1.0.0"
+    "devDependencies": {
+        "cus-loader-utils": "workspace:*"
     }
 }

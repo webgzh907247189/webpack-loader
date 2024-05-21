@@ -50,6 +50,12 @@ importers:
         specifier: workspace:^
         version: link:../cus-loader-utils
 
+  packages/record-webapck-loader:
+    devDependencies:
+      cus-loader-utils:
+        specifier: workspace:*
+        version: link:../cus-loader-utils
+
 packages:
 
   /@babel/code-frame@7.24.2:
