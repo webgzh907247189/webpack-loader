@@ -1,0 +1,46 @@
+{
+    "name": "root",
+    "private": true,
+    "version": "1.0.0",
+    "description": "monorepo webpack loader collection",
+    "scripts": {
+        "lint-fix": "eslint . --ext .ts --fix",
+        "prettier": "npx prettier --write .",
+        "prepare": "husky install",
+        "build": "pnpm run build -r --parallel",
+        "changeset": "changeset && npm run version-packages",
+        "version-packages": "changeset version",
+        "publish": "changeset publish -r"
+    },
+    "author": "",
+    "license": "ISC",
+    "workspaces": [
+        "packages/*"
+    ],
+    "homepage": "https://github.com/webgzh907247189/webpack-plugin",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webgzh907247189/webpack-plugin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/webgzh907247189/webpack-plugin/issues"
+    },
+    "lint-staged": {
+        "src/**/*.{js,ts,tsx,vue}": [
+            "npm run prettier",
+            "npm run lint-fix"
+        ]
+    },
+    "devDependencies": {
+        "@types/loader-utils": "^2.0.6",
+        "@types/node": "^20.12.12",
+        "@typescript-eslint/eslint-plugin": "^5.62.0",
+        "@typescript-eslint/parser": "^5.8.0",
+        "changeset": "^0.2.6",
+        "eslint": "^8.5.0",
+        "eslint-config-prettier": "^8.10.0",
+        "husky": "^9.0.11",
+        "loader-utils": "^3.2.1",
+        "typescript": "^5.4.5"
+    }
+}
