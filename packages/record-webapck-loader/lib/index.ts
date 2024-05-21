@@ -15,7 +15,11 @@ const getStreamDataWrapper = () => {
                 const filePath = path.resolve(__dirname, options.writerPath);
 
                 // 同步删除
-                fs.unlinkSync(filePath);
+                try {
+                    fs.unlinkSync(filePath);
+                } catch {
+                    console.log('删除文件失败');
+                }
             }
 
             // 每次脚本执行清空上一次执行 记录的 信息
