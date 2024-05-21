@@ -17,13 +17,13 @@
     "workspaces": [
         "packages/*"
     ],
-    "homepage": "https://github.com/webgzh907247189/webpack-plugin",
+    "homepage": "https://github.com/webgzh907247189/webpack-loader",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/webgzh907247189/webpack-plugin.git"
+        "url": "git+https://github.com/webgzh907247189/webpack-loader.git"
     },
     "bugs": {
-        "url": "https://github.com/webgzh907247189/webpack-plugin/issues"
+        "url": "https://github.com/webgzh907247189/webpack-loader/issues"
     },
     "lint-staged": {
         "src/**/*.{js,ts,tsx,vue}": [
