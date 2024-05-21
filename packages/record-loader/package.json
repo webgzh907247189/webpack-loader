@@ -1,0 +1,34 @@
+{
+    "name": "record-loader",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc ./lib/index.ts -outDir ./dist -declaration true",
+        "showConfig": "npx tsc --showConfig"
+    },
+    "license": "ISC",
+    "directories": {
+        "lib": "lib"
+    },
+    "keywords": [
+        "cus",
+        "loader",
+        "record",
+        "record image"
+    ],
+    "typings": "dist/index.d.ts",
+    "files": [
+        "lib",
+        "dist",
+        "types"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webgzh907247189/webpack-plugin.git"
+    },
+    "dependencies": {
+        "cus-loader-utils": "workspace:^"
+    }
+}

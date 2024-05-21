@@ -1,0 +1,31 @@
+{
+    "name": "cus-loader-utils",
+    "version": "1.0.0",
+    "description": "cus loader utils",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc ./lib/index.ts -outDir ./dist -declaration true",
+        "showConfig": "npx tsc --showConfig"
+    },
+    "license": "ISC",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "keywords": [
+        "cus",
+        "loader",
+        "utils"
+    ],
+    "typings": "dist/index.d.ts",
+    "files": [
+        "lib",
+        "dist",
+        "types"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webgzh907247189/webpack-plugin.git"
+    },
+    "author": ""
+}
