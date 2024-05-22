@@ -51,10 +51,16 @@ importers:
         version: link:../cus-loader-utils
 
   packages/record-webapck-loader:
-    devDependencies:
+    dependencies:
       cus-loader-utils:
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../cus-loader-utils
+
+  packages/record-webapck-raw-loader:
+    dependencies:
+      record-webapck-loader:
+        specifier: workspace:^
+        version: link:../record-webapck-loader
 
 packages:
 

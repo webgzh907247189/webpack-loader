@@ -1,6 +1,6 @@
 {
-    "name": "record-webapck-loader",
-    "version": "1.1.0",
+    "name": "record-webapck-raw-loader",
+    "version": "1.0.0",
     "description": "",
     "author": "",
     "main": "dist/index.js",
@@ -16,7 +16,7 @@
         "cus",
         "loader",
         "record",
-        "record assets",
+        "record image",
         "record compile has assets"
     ],
     "typings": "dist/index.d.ts",
@@ -30,6 +30,6 @@
         "url": "git+https://github.com/webgzh907247189/webpack-loader.git"
     },
     "dependencies": {
-        "cus-loader-utils": "workspace:^"
+        "record-webapck-loader": "workspace:^"
     }
 }
