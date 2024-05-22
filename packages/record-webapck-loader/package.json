@@ -1,6 +1,6 @@
 {
     "name": "record-webapck-loader",
-    "version": "2.0.0",
+    "version": "1.2.1",
     "description": "",
     "author": "",
     "main": "dist/index.js",
