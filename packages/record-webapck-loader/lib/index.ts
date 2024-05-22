@@ -40,7 +40,7 @@ beforeExitHook(() => {
     getStreamData = null;
 });
 
-export default function (source: any) {
+export = function (source: any) {
     type LoaderCTX = webpack.loader.LoaderContext;
     // @ts-ignore
     const _this: LoaderCTX = this;
@@ -60,4 +60,4 @@ export default function (source: any) {
     }
 
     return source;
-}
+};
