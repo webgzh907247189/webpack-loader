@@ -1,5 +1,11 @@
 # record-webapck-loader
 
+## 1.0.3
+
+### Patch Changes
+
+-   change code
+
 ## 2.0.0
 
 ### Major Changes
