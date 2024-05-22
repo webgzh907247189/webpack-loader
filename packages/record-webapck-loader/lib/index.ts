@@ -45,7 +45,7 @@ module.exports = function (source: any) {
     // @ts-ignore
     const _this: LoaderCTX = this;
 
-    const { writerPath, clean = true } = loadUtils.getOptions(_this) || {};
+    const { writerPath, clean = true } = loadUtils.getOptions(_this) ?? {};
 
     if (writerPath) {
         const streamData = getStreamData!({

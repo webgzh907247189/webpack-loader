@@ -10,7 +10,7 @@
         "build": "pnpm -r run build ",
         "changeset": "changeset && npm run version-packages",
         "version-packages": "changeset version",
-        "publish": "changeset publish -r"
+        "publish": "changeset publish -r --access public"
     },
     "author": "",
     "license": "ISC",
