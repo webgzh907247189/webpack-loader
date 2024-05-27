@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as loadUtils from 'loader-utils';
-import beforeExitHook from 'cus-loader-utils';
+import { beforeExitHook } from 'cus-loader-utils';
 import webpack = require('webpack');
 
 type TypeOption = { writerPath: string; clean: boolean };
@@ -18,7 +18,7 @@ const getStreamDataWrapper = () => {
                 try {
                     fs.unlinkSync(filePath);
                 } catch {
-                    console.log('删除文件失败');
+                    console.log('\x1B[41;30m 删除文件失败  \x1B[0m');
                 }
             }
 
@@ -45,7 +45,7 @@ export = function (source: any) {
     // @ts-ignore
     const _this: LoaderCTX = this;
 
-    const { writerPath, clean = true } = loadUtils.getOptions(_this) ?? {};
+    const { writerPath, clean = true, match } = loadUtils.getOptions(_this) ?? {};
 
     if (writerPath) {
         const streamData = getStreamData!({
@@ -54,9 +54,27 @@ export = function (source: any) {
             // @ts-ignore
             clean,
         });
-
         const logger = new console.Console(streamData);
-        logger.log(_this.resourcePath);
+
+        // 添加 match 匹配逻辑， 在实际 vue 项目，发现没有 match，.vue 文件也会匹配到 .js 里面， 所以加上 匹配逻辑
+        if (match) {
+            const resourcePath = _this.resourcePath;
+            let flag = true;
+            if (typeof match === 'string') {
+                flag = resourcePath.endsWith(match);
+            } else if (Array.isArray(match)) {
+                flag = match.some((item) => resourcePath.endsWith(item));
+            } else {
+                flag = false;
+                console.log('\x1B[41;30m 不支持的 macth 格式  \x1B[0m');
+            }
+            if (flag) {
+                logger.log(resourcePath);
+                return source;
+            }
+        } else {
+            logger.log(_this.resourcePath);
+        }
     }
 
     return source;

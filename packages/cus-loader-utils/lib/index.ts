@@ -1,12 +1,2 @@
-import * as process from 'node:process';
-
-type TypeBeforeExitHook = (cb: () => void) => void;
-const beforeExitHook: TypeBeforeExitHook = (cb) => {
-    // 执行结束，释放内存
-    process.on('beforeExit', function () {
-        console.log('执行结束，释放内存');
-        cb();
-    });
-};
-
-export default beforeExitHook;
+export { default as beforeExitHook } from './beforeExitHook';
+export { default as getDiffByDirAndLogFile } from './getDiffByDirAndLogFile';
