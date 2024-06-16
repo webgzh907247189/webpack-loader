@@ -17,7 +17,9 @@
         "loader",
         "record",
         "record image",
-        "record compile has assets"
+        "record compile has assets",
+        "dead file detection",
+        "dead file delete"
     ],
     "typings": "dist/index.d.ts",
     "files": [
