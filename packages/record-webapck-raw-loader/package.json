@@ -1,6 +1,6 @@
 {
     "name": "record-webapck-raw-loader",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "",
     "author": "",
     "main": "dist/index.js",
@@ -11,6 +11,9 @@
     "license": "ISC",
     "directories": {
         "lib": "lib"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "keywords": [
         "cus",

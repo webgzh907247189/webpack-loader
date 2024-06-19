@@ -1,11 +1,14 @@
 {
     "name": "cus-loader-utils",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "cus loader utils",
     "main": "dist/index.js",
     "scripts": {
         "build": "tsc ./lib/index.ts -outDir ./dist -declaration true",
         "showConfig": "npx tsc --showConfig"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "license": "ISC",
     "directories": {
