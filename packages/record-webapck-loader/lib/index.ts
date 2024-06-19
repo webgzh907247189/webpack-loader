@@ -12,13 +12,13 @@ const getStreamDataWrapper = () => {
     return (options: TypeOption) => {
         if (!streamData) {
             if (options.clean) {
-                const filePath = path.resolve(__dirname, options.writerPath)
+                const filePath = path.resolve(__dirname, options.writerPath);
 
                 // 同步删除
                 try {
-                    fs.unlinkSync(filePath)
+                    fs.unlinkSync(filePath);
                 } catch {
-                    console.log('\x1B[41;30m 删除文件失败  \x1B[0m')
+                    console.log('\x1B[41;30m 删除文件失败  \x1B[0m');
                 }
             }
 
@@ -27,7 +27,7 @@ const getStreamDataWrapper = () => {
                 flags: 'a',
             });
 
-            return streamData
+            return streamData;
         }
 
         return streamData;
