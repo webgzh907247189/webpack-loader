@@ -43,14 +43,14 @@ beforeExitHook(() => {
 
 export = function (source: any) {
     type LoaderCTX = webpack.loader.LoaderContext;
-    // @ts-ignore
+    // @ts-expect-error
     const _this: LoaderCTX = this;
 
     const { writerPath, clean = true, match } = loadUtils.getOptions(_this) ?? {};
 
     if (writerPath) {
         const streamData = getStreamData!({
-            // @ts-ignore
+            // @ts-expect-error
             writerPath,
             // @ts-ignore
             clean,
