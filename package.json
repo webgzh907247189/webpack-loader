@@ -4,10 +4,10 @@
     "version": "1.0.0",
     "description": "monorepo webpack loader collection",
     "scripts": {
-        "lint-fix": "eslint . --ext .ts --fix",
-        "prettier": "npx prettier --write .",
+        "lint-fix": "eslint packages --ext .ts --fix",
+        "prettier": "npx prettier --write packages/**/*.ts",
         "prepare": "husky install",
-        "build": "pnpm -r run build ",
+        "build": "pnpm -r --parallel run build",
         "changeset": "changeset && npm run version-packages",
         "version-packages": "changeset version",
         "publish": "changeset publish -r"
@@ -25,8 +25,13 @@
     "bugs": {
         "url": "https://github.com/webgzh907247189/webpack-loader/issues"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "lint-staged": {
-        "src/**/*.{js,ts,tsx,vue}": [
+        "packages/**/*.{js,ts}": [
             "npm run prettier",
             "npm run lint-fix"
         ]

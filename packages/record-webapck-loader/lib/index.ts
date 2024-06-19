@@ -16,7 +16,7 @@ const getStreamDataWrapper = () => {
 
                 // 同步删除
                 try {
-                    fs.unlinkSync(filePath);
+                    fs.unlinkSync(filePath)
                 } catch {
                     console.log('\x1B[41;30m 删除文件失败  \x1B[0m');
                 }
@@ -26,7 +26,8 @@ const getStreamDataWrapper = () => {
             streamData = fs.createWriteStream(options.writerPath, {
                 flags: 'a',
             });
-            return streamData;
+
+            return streamData
         }
 
         return streamData;
