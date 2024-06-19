@@ -1,52 +1,52 @@
 {
-    "name": "root",
-    "private": true,
-    "version": "1.0.0",
-    "description": "monorepo webpack loader collection",
-    "scripts": {
-        "lint-fix": "eslint packages --ext .ts --fix",
-        "prettier": "npx prettier --write packages/**/*.ts",
-        "prepare": "husky install",
-        "build": "pnpm -r --parallel run build",
-        "changeset": "changeset && npm run version-packages",
-        "version-packages": "changeset version",
-        "publish": "changeset publish -r"
-    },
-    "author": "",
-    "license": "ISC",
-    "workspaces": [
-        "packages/*"
-    ],
-    "homepage": "https://github.com/webgzh907247189/webpack-loader",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/webgzh907247189/webpack-loader.git"
-    },
-    "bugs": {
-        "url": "https://github.com/webgzh907247189/webpack-loader/issues"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "packages/**/*.{js,ts}": [
-            "npm run prettier",
-            "npm run lint-fix"
-        ]
-    },
-    "devDependencies": {
-        "@changesets/cli": "^2.27.3",
-        "@types/loader-utils": "^2.0.6",
-        "@types/node": "^20.12.12",
-        "@typescript-eslint/eslint-plugin": "^5.62.0",
-        "@typescript-eslint/parser": "^5.8.0",
-        "changeset": "^0.2.6",
-        "eslint": "^8.5.0",
-        "eslint-config-prettier": "^8.10.0",
-        "husky": "^9.0.11",
-        "loader-utils": "^3.2.1",
-        "typescript": "^5.4.5"
+  "name": "root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "monorepo webpack loader collection",
+  "scripts": {
+    "lint-fix": "eslint packages --ext .ts --fix",
+    "prettier": "npx prettier --write packages/**/*.ts",
+    "prepare": "husky",
+    "build": "pnpm -r --parallel run build",
+    "changeset": "changeset && npm run version-packages",
+    "version-packages": "changeset version",
+    "publish": "changeset publish -r"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "homepage": "https://github.com/webgzh907247189/webpack-loader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webgzh907247189/webpack-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webgzh907247189/webpack-loader/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "packages/**/*.{js,ts}": [
+      "npm run prettier",
+      "npm run lint-fix"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.3",
+    "@types/loader-utils": "^2.0.6",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "changeset": "^0.2.6",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.10.0",
+    "husky": "^9.0.11",
+    "loader-utils": "^3.2.1",
+    "typescript": "^5.4.5"
+  }
 }
