@@ -1,0 +1,38 @@
+{
+    "name": "launch-ide-loader",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc ./lib/index.ts -outDir ./dist -declaration true",
+        "showConfig": "npx tsc --showConfig"
+    },
+    "license": "ISC",
+    "directories": {
+        "lib": "lib"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "launch ide",
+        "loader",
+        "launch vscode",
+        "watch file change recompiler",
+        "watch file change webpack restart"
+    ],
+    "typings": "dist/index.d.ts",
+    "files": [
+        "lib",
+        "dist",
+        "types"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webgzh907247189/webpack-loader.git"
+    },
+    "author": "",
+    "devDependencies": {
+        "cus-utils": "^1.1.3"
+    }
+}
