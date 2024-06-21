@@ -8,6 +8,8 @@
 
 ### 在 webpack 编译阶段 通过自定义 loader 唤起 IDE(vscode，webstorm ....)
 
+### 参考文章 https://juejin.cn/post/7382891974942244890
+
 ##### options.filename: 监控的文件，此文件维护 唤起的 ide 名字
 
 ```javascript
