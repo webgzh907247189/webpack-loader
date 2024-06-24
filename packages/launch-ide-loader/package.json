@@ -1,6 +1,6 @@
 {
     "name": "launch-ide-loader",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
@@ -32,7 +32,7 @@
         "url": "git+https://github.com/webgzh907247189/webpack-loader.git"
     },
     "author": "",
-    "devDependencies": {
-        "cus-utils": "^1.1.3"
+    "dependencies": {
+        "cus-utils": "^1.1.4"
     }
 }
