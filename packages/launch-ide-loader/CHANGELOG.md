@@ -1,5 +1,11 @@
 # launch-ide-loader
 
+## 1.0.2
+
+### Patch Changes
+
+-   change new version for launch webstorm ide
+
 ## 1.0.1
 
 ### Patch Changes

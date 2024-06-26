@@ -56,8 +56,8 @@ importers:
   packages/launch-ide-loader:
     dependencies:
       cus-utils:
-        specifier: ^1.1.4
-        version: 1.1.4
+        specifier: ^1.1.5
+        version: 1.1.5
 
   packages/record-webapck-loader:
     dependencies:
@@ -895,8 +895,8 @@ packages:
       stream-transform: 2.1.3
     dev: true
 
-  /cus-utils@1.1.4:
-    resolution: {integrity: sha512-6Qg2CR1LeC4S0fGUcpNkM55zPyAJatarbPv1Pl9xESL+bTaGeGZjURIGdxqoHd5Mh9XSs9cKK/XpYjsi+rOT0Q==}
+  /cus-utils@1.1.5:
+    resolution: {integrity: sha512-umzNJW1zONMJ1EcaHVoH/jqLqpUd7k+cYBy5/8H3owbmGv0S1N4C7hkUyWQ6lo5LBJ64rmfY4wTaqq8IrDtNAg==}
     dependencies:
       core-js: 3.37.1
     dev: false

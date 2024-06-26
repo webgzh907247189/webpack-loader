@@ -1,6 +1,6 @@
 {
     "name": "launch-ide-loader",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
@@ -33,6 +33,6 @@
     },
     "author": "",
     "dependencies": {
-        "cus-utils": "^1.1.4"
+        "cus-utils": "^1.1.5"
     }
 }
