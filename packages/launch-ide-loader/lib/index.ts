@@ -11,13 +11,18 @@ export = function normal(source: string) {
 
     const cb = _this.async();
 
-    const { filename } = loadUtils.getOptions(_this) ?? {};
+    const options = loadUtils.getOptions(_this) ?? {};
+    const { filename, userGetUrl } = options;
 
     // 默认唤起 vscode
     let data = { ideName: 'vscode' };
 
     if (filename && typeof filename !== 'string') {
         throw new Error('filename 是监控文件 的路径');
+    }
+
+    if (userGetUrl && typeof userGetUrl !== 'function') {
+        throw new Error('userGetUrl 必须要是一个 function');
     }
 
     // 如果存在需要被监控的文件, require 进来 且加载文件 替换默认 唤起的ide 配置
@@ -41,7 +46,7 @@ export = function normal(source: string) {
         // const vmReturnData = script.runInContext(context);
     }
 
-    const launchIdeStrScript = launchIDEConfig(data.ideName ?? 'vscode');
+    const launchIdeStrScript = launchIDEConfig(data.ideName ?? 'vscode', userGetUrl as any as (a: string) => string);
 
     const str = ` 
         let script = document.createElement("script");
